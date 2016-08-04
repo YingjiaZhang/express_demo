@@ -14,3 +14,18 @@ describe('GET /params', function () {
             })
     });
 });
+
+describe('GET /query', function () {
+    it('should get a parameter from query', function (done) {
+        request(app)
+            .get('/query?name=zyj')
+            .end(function (err, res) {
+                expect(res.text).toEqual('zyj');
+                if (err) {
+                    done(err);
+                } else {
+                    done();
+                }
+            });
+    });
+});
