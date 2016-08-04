@@ -46,4 +46,18 @@ describe('POST /body', function () {
     });
 });
 
-
+describe('GET /header', function () {
+    it('should get a parameter from header', function (done) {
+        request(app)
+            .post('/header')
+            .set('name', 'zyj')
+            .end(function (err, res) {
+                expect(res.text).toEqual('zyj');
+                if (err) {
+                    done(err);
+                } else {
+                    done();
+                }
+            });
+    });
+});
