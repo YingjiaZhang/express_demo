@@ -61,3 +61,21 @@ describe('GET /header', function () {
             });
     });
 });
+
+describe('GET /json', function () {
+    it('should get a parameter from json', function (done) {
+        request(app)
+            .post('/json')
+            .send({name: 'zyj'})
+            .end(function (err, res) {
+                expect(res.text).toEqual('zyj');
+                if (err) {
+                    done(err);
+                } else {
+                    done();
+                }
+            });
+    });
+})
+
+

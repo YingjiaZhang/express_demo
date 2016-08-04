@@ -20,5 +20,9 @@ app.post('/header', function (req, res) {
     res.send(req.get('name'));
 });
 
+app.post('/json', function (req, res) {
+    res.json(req.body.name);
+})
+
 app.listen(3000);
 module.exports = app;
