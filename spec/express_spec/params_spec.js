@@ -29,3 +29,21 @@ describe('GET /query', function () {
             });
     });
 });
+
+describe('POST /body', function () {
+    it('should get a parameter from body', function (done) {
+        request(app)
+            .post('/body')
+            .send({name: 'zyj'})
+            .end(function (err, res) {
+                expect(res.text).toEqual('zyj');
+                if (err) {
+                    done(err);
+                } else {
+                    done();
+                }
+            });
+    });
+});
+
+

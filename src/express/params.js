@@ -12,5 +12,10 @@ app.get('/query', function (req, res) {
     res.send(req.query.name);
 });
 
+app.post('/body', function (req, res) {
+    res.send(req.body.name);
+});
+
+
 app.listen(3000);
 module.exports = app;
