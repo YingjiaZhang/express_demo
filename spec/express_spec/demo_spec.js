@@ -68,7 +68,7 @@ describe('GET /json', function () {
             .post('/json')
             .send({name: 'zyj'})
             .end(function (err, res) {
-                expect(res.text).toEqual('zyj');
+                expect(res.text).toEqual('"zyj"');
                 if (err) {
                     done(err);
                 } else {
