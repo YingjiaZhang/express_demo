@@ -2,7 +2,7 @@
  * Created by Sunshine on 2016/8/4.
  */
 var request = require('supertest');
-var app = require('../../src/express/params.js');
+var app = require('../../src/express/demo.js');
 
 describe('GET /params', function () {
     it('should response get parameter from params', function (done) {
